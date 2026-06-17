@@ -32,7 +32,7 @@ export default function MainGatePage() {
     {
       id: "m1",
       role: "bot", // Styled as bot matching the array parser loop logic
-      text: "System automated support online. I am Alpha Insecure 1.0. How can I help you navigate the gate terminal?",
+      text: "Alpha Insecure 1.0 is ready",
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
     },
   ])
