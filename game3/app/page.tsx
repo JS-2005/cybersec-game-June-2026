@@ -16,7 +16,7 @@ interface Message {
 }
 
 export default function MainGatePage() {
-  const targetPassword = process.env.NEXT_PUBLIC_GATE_PASSWORD || "admin123"
+  const targetPassword = process.env.NEXT_PUBLIC_PASSWORD || ""
 
   // Page-level authentication states
   const [isMainUnlocked, setIsMainUnlocked] = useState(false)
