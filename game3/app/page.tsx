@@ -2,7 +2,6 @@
 
 import React, { useState, useRef, useEffect } from "react"
 import { Send, Bot, User, MessageCircle, X, Lock, Unlock, Eye, EyeOff, ShieldAlert, Loader2 } from "lucide-react"
-
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { ScrollArea } from "@/components/ui/scroll-area"
