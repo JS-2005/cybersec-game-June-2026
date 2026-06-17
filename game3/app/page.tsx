@@ -36,7 +36,8 @@ export default function Page() {
     const prompt = e.target.prompt.value;
     if (!prompt) return;
 
-    setMessages(prev => [...prev, { role: 'user', text: prompt }]);
+    const newMessages = [...messages, { role: 'user' as const, text: prompt }];
+    setMessages(newMessages);
     setLoadingChat(true);
     e.target.prompt.value = '';
 
@@ -46,7 +47,7 @@ export default function Page() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ prompt }),
+        body: JSON.stringify({ messages: newMessages }),
       });
       const data = await res.json();
       setMessages(prev => [...prev, { role: 'bot', text: data.message || 'No response received. Please try again.' }]);
